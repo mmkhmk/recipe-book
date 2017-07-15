@@ -1,0 +1,76 @@
+.container
+  h1 Create New Recipe
+
+  p.bg-warning = flash[:message]
+
+  = nested_form_for @recipe, html: { class: "form-horizontal" } do |f|
+    .form-group
+      = f.label :title, "タイトル"
+      br
+      = f.text_field :title, placeholder: "タイトル", class: "form-control"
+
+    .form-group
+      = f.label :description, "説明"
+      br
+      = f.text_area :description, placeholder: "説明", class: "form-control"
+
+    .form-group
+      = f.label :picture, "写真"
+      br
+      = f.fields_for :picture do |p|
+        = p.file_field :picture
+
+    .form-group
+      = f.label :cook_time, "調理時間（分）"
+      br
+      = f.text_field :cook_time, placeholder: "5", class: "form-control"
+
+    .form-group
+      = f.label :serving_for, "何人分（人）"
+      br
+      = f.text_field :serving_for, placeholder: "2", class: "form-control"
+
+    .form-group
+      = f.label :ingredients, "材料"
+      br
+      table.table-striped.table-bordered.table-hover#ingredients
+        thead
+          tr
+            th 名前
+            th 分量
+            th 操作
+        tbody
+          = f.fields_for :ingredients, wrapper: false do |ingredient_form|
+            tr.fields
+              td
+                = ingredient_form.text_field :name, class: "form-control"
+              td
+                = ingredient_form.text_field :quantity, class: "form-control"
+              td
+                = ingredient_form.link_to_remove "削除", class: "btn btn-danger"
+      = f.link_to_add "追加", :ingredients, class: "btn btn-default", role: "button", data: { target: "#ingredients" }
+
+    .form-group
+      = f.label :steps, "手順"
+      br
+      #steps
+        = f.fields_for :steps do |step_form|
+         .input-group
+            = step_form.text_area :description, class: "form-control"
+            .input-group-btn
+              = step_form.link_to_remove "削除", class: "btn btn-danger"
+      = f.link_to_add "追加", :steps, class: "btn btn-default", data: { target: "#steps" }
+
+    .form-group
+      = f.label :cook_point, "料理のポイント・コツ"
+      br
+      = f.text_area :cook_point, placeholder: "コツ", class: "form-control"
+
+    .form-group
+      = f.label :tag, "タグ"
+      br
+      = f.fields_for :tag do |t|
+        = t.text_field :name, placeholder: "タグ名", class: "form-control"
+
+    .actions
+      = f.submit "作成", class: "btn btn-primary"

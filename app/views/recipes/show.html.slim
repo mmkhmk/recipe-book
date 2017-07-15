@@ -1,0 +1,56 @@
+.container
+  h1 Recipe Book
+
+  ol.breadcrumb
+    li
+      = link_to "Home", recipes_path
+    li
+      = link_to @recipe.tag.name, recipes_path(tag: @recipe.tag.id)
+    li.active
+      = @recipe.title
+
+  div
+    .row
+      .col-md-12
+        h3 = @recipe.title
+
+    .row
+      .col-md-6
+        = image_tag @recipe.medium_image, class: "center-block"
+
+      .col-md-6
+        p
+          = @recipe.description
+        br
+        h4 調理時間 #{@recipe.cook_time}分
+        br
+
+        h4 材料（#{@recipe.serving_for}人分）
+        ul
+          - @recipe.ingredients.each do |ingredient|
+            li = "#{ingredient.name} ... #{ingredient.quantity}"
+
+    .row
+      .col-md-12
+        h4 手順
+        ol
+          - @recipe.steps.each do |step|
+            li = step.description
+        br
+        h4 料理のコツ・ポイント
+        p = @recipe.cook_point
+
+        br
+        p
+          h4 関連レシピ
+          - if (related_recipes = @recipe.related_recipes).present?
+            .row
+              - related_recipes.each do |recipe|
+                .col-md-3
+                  .thumbnail
+                    = image_tag recipe.small_image
+                    h5.text-center
+                      = link_to recipe.title, recipe_path(recipe)
+          - else
+            br
+            | 関連レシピはありません。
