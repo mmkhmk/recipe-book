@@ -1,25 +1,5 @@
-# README
+# Recipe Book
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Recipe Book provides simple functions to manage various recipes.
 
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
-# recipe-book
+This code is uploaded on https://recipe-book-201707.herokuapp.com/
