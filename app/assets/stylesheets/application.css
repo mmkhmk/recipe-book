@@ -15,11 +15,15 @@
  */
 
 .container {
-  width: 900px;
+  width: 980px;
 }
 
 .row {
   padding: 10px;
+}
+
+.thumbnail {
+  height: 380px;
 }
 
 .form-horizontal {
