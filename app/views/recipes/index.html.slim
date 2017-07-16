@@ -32,7 +32,7 @@
             .thumbnail
               = link_to image_tag(recipe.small_image, class: "thumbnail"), recipe_path(recipe)
               .caption
-                h4 = link_to recipe.title, recipe_path(recipe)
+                h4 = link_to truncate(recipe.title), recipe_path(recipe)
                 small = truncate(recipe.description, length: 60)
 
     - else
