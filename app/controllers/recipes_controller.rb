@@ -4,7 +4,8 @@ class RecipesController < ApplicationController
 
   def index
     @recipes = Recipe.search(params)
-    @tag = Tag.find_by(id: params[:tag]) if params[:tag].present?
+    @tag     = Tag.find_by(id: params[:tag]) if params[:tag].present?
+    @tags    = Tag.all unless params[:tag].present?
   end
 
   def new

@@ -1,5 +1,5 @@
 current directory: /Users/t09614et/recipe_book/vendor/bundle/ruby/2.4.0/gems/byebug-9.0.6/ext/byebug
-/Users/t09614et/.rbenv/versions/2.4.1/bin/ruby -r ./siteconf20170715-21882-1p6iotr.rb extconf.rb
+/Users/t09614et/.rbenv/versions/2.4.1/bin/ruby -r ./siteconf20170716-13808-16m01h7.rb extconf.rb
 creating Makefile
 
 current directory: /Users/t09614et/recipe_book/vendor/bundle/ruby/2.4.0/gems/byebug-9.0.6/ext/byebug
@@ -16,4 +16,4 @@ linking shared-object byebug/byebug.bundle
 
 current directory: /Users/t09614et/recipe_book/vendor/bundle/ruby/2.4.0/gems/byebug-9.0.6/ext/byebug
 make "DESTDIR=" install
-/usr/bin/install -c -m 0755 byebug.bundle ./.gem.20170715-21882-15preu0/byebug
+/usr/bin/install -c -m 0755 byebug.bundle ./.gem.20170716-13808-crludk/byebug

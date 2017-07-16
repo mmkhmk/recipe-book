@@ -1,5 +1,5 @@
 current directory: /Users/t09614et/recipe_book/vendor/bundle/ruby/2.4.0/gems/nio4r-2.1.0/ext/nio4r
-/Users/t09614et/.rbenv/versions/2.4.1/bin/ruby -r ./siteconf20170715-21882-ldsr4l.rb extconf.rb
+/Users/t09614et/.rbenv/versions/2.4.1/bin/ruby -r ./siteconf20170716-13808-1pboptv.rb extconf.rb
 checking for unistd.h... yes
 checking for sys/select.h... yes
 checking for poll.h... yes
@@ -238,4 +238,4 @@ linking shared-object nio4r_ext.bundle
 
 current directory: /Users/t09614et/recipe_book/vendor/bundle/ruby/2.4.0/gems/nio4r-2.1.0/ext/nio4r
 make "DESTDIR=" install
-/usr/bin/install -c -m 0755 nio4r_ext.bundle ./.gem.20170715-21882-w1ajt9
+/usr/bin/install -c -m 0755 nio4r_ext.bundle ./.gem.20170716-13808-tmg15a

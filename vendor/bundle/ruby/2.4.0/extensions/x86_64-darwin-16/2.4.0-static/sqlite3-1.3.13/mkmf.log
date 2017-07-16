@@ -304,7 +304,7 @@ checked program was:
 ld: warning: directory not found for option '-L/usr/local/Cellar/sqlite/3.19.3/lib'
 Undefined symbols for architecture x86_64:
   "_sqlite3_column_database_name", referenced from:
-      _t in conftest-e7517d.o
+      _t in conftest-d58256.o
 ld: symbol(s) not found for architecture x86_64
 clang: error: linker command failed with exit code 1 (use -v to see invocation)
 checked program was:
@@ -355,7 +355,7 @@ checked program was:
 ld: warning: directory not found for option '-L/usr/local/Cellar/sqlite/3.19.3/lib'
 Undefined symbols for architecture x86_64:
   "_sqlite3_enable_load_extension", referenced from:
-      _t in conftest-e7cd6e.o
+      _t in conftest-1405e5.o
 ld: symbol(s) not found for architecture x86_64
 clang: error: linker command failed with exit code 1 (use -v to see invocation)
 checked program was:
@@ -406,7 +406,7 @@ checked program was:
 ld: warning: directory not found for option '-L/usr/local/Cellar/sqlite/3.19.3/lib'
 Undefined symbols for architecture x86_64:
   "_sqlite3_load_extension", referenced from:
-      _t in conftest-3e6295.o
+      _t in conftest-e8b47e.o
 ld: symbol(s) not found for architecture x86_64
 clang: error: linker command failed with exit code 1 (use -v to see invocation)
 checked program was:

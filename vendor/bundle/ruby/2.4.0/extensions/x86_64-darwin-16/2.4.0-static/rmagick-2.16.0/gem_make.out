@@ -1,5 +1,5 @@
 current directory: /Users/t09614et/recipe_book/vendor/bundle/ruby/2.4.0/gems/rmagick-2.16.0/ext/RMagick
-/Users/t09614et/.rbenv/versions/2.4.1/bin/ruby -r ./siteconf20170715-48652-1bjxosm.rb extconf.rb
+/Users/t09614et/.rbenv/versions/2.4.1/bin/ruby -r ./siteconf20170716-13808-1kupaf5.rb extconf.rb
 checking for clang... yes
 checking for Magick-config... yes
 checking for outdated ImageMagick version (<= 6.4.9)... no
@@ -129,7 +129,7 @@ creating Makefile
 
 
 ======================================================================
-Sat 15Jul17 14:01:51
+Sun 16Jul17 16:28:55
 This installation of RMagick 2.16.0 is configured for
 Ruby 2.4.1 (x86_64-darwin16) and ImageMagick 6.9.7
 ======================================================================
@@ -200,4 +200,4 @@ linking shared-object RMagick2.bundle
 
 current directory: /Users/t09614et/recipe_book/vendor/bundle/ruby/2.4.0/gems/rmagick-2.16.0/ext/RMagick
 make "DESTDIR=" install
-/usr/bin/install -c -m 0755 RMagick2.bundle ./.gem.20170715-48652-1174g1k
+/usr/bin/install -c -m 0755 RMagick2.bundle ./.gem.20170716-13808-1kjpnzp

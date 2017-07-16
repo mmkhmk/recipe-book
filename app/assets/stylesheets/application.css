@@ -15,9 +15,30 @@
  */
 
 .container {
-  width: 980px;
+  width: 900px;
 }
 
 .row {
   padding: 10px;
+}
+
+.form-horizontal {
+  padding: 10px;
+}
+
+.ingredient-row {
+  border-bottom: 1px solid #E5E5E5;
+  padding: 1px 5px;
+}
+
+.ingredient-name {
+  display: inline;
+  text-align: left;
+}
+
+.ingredient-quantity {
+  float: right;
+  text-align: right;
+  display: inline;
+  margin: 0 0 0 10px;
 }

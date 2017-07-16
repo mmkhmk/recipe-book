@@ -1,28 +1,39 @@
 .container
-  h1 Recipe Book
+  .page-header
+    h1 Recipe Book
 
   ol.breadcrumb
     - if @tag.present?
-      li
-        = link_to "Home", recipes_path
-      li.active
-        = @tag.name
+      li = link_to "Home", recipes_path
+      li.active = @tag.name
     - else
-      li.active
-        | Home
-
-  = button_to "新規作成", { action: :new }, method: :get, class: "btn btn-primary"
+      li.active Home
 
   div
+    = button_to "新規作成", { action: :new }, method: :get, class: "btn btn-primary"
+
+  - if @tags.present?
+    div
+      h3 タグ一覧
+      ul
+        - @tags.each do |tag|
+          li
+            = link_to tag.name, recipes_path(tag: tag.id)
+
+  div
+    - if @tag.present?
+      h3 #{@tag.name}のレシピ一覧
+    - else
+      h3 レシピ一覧
     - if @recipes.present?
       .row
         - @recipes.each do |recipe|
-          .col-md-3
+          .col-md-5
             .thumbnail
-              = image_tag recipe.small_image, class: "thumbnail"
-              h4.text-center
-                = link_to recipe.title, recipe_path(recipe)
-              = button_to "削除", { action: :destroy, id: recipe.id }, confirm: "本当に削除しますか？", method: :delete, class: "btn btn-danger center-block"
+              = link_to image_tag(recipe.small_image, class: "thumbnail"), recipe_path(recipe)
+              .caption
+                h4 = link_to recipe.title, recipe_path(recipe)
+                small = truncate(recipe.description, length: 52)
 
     - else
       p レシピが登録されていません。

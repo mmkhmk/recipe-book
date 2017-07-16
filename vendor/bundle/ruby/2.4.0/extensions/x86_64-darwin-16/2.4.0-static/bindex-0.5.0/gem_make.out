@@ -1,5 +1,5 @@
 current directory: /Users/t09614et/recipe_book/vendor/bundle/ruby/2.4.0/gems/bindex-0.5.0/ext/bindex
-/Users/t09614et/.rbenv/versions/2.4.1/bin/ruby -r ./siteconf20170715-21882-vtf8fz.rb extconf.rb
+/Users/t09614et/.rbenv/versions/2.4.1/bin/ruby -r ./siteconf20170716-13808-fu9sm1.rb extconf.rb
 creating Makefile
 
 current directory: /Users/t09614et/recipe_book/vendor/bundle/ruby/2.4.0/gems/bindex-0.5.0/ext/bindex
@@ -12,4 +12,4 @@ linking shared-object bindex/cruby.bundle
 
 current directory: /Users/t09614et/recipe_book/vendor/bundle/ruby/2.4.0/gems/bindex-0.5.0/ext/bindex
 make "DESTDIR=" install
-/usr/bin/install -c -m 0755 cruby.bundle ./.gem.20170715-21882-1554gy3/bindex
+/usr/bin/install -c -m 0755 cruby.bundle ./.gem.20170716-13808-1vap4zw/bindex

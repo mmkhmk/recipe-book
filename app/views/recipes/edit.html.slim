@@ -1,7 +1,20 @@
 .container
-  h1 Edit Recipe
+  .page-header
+    h1 Recipe Book
 
-  p.bg-warning = flash[:message]
+  ol.breadcrumb
+    li = link_to "Home", recipes_path
+    li = link_to @recipe.tag.name, recipes_path(tag: @recipe.tag.id)
+    li = link_to @recipe.title, recipe_path(@recipe)
+    li.acitve 編集
+
+  - if flash[:message]
+    .alert.alert-warning role="warning"
+      strong "Warning! "
+      = flash[:message]
+
+  div
+    = button_to "このレシピを削除する", recipe_path(@recipe), confirm: "本当に削除しますか？", method: :delete, class: "btn btn-danger"
 
   = nested_form_for @recipe, html: { class: "form-horizontal" } do |f|
     .form-group
