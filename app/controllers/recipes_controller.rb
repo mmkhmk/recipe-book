@@ -30,10 +30,10 @@ class RecipesController < ApplicationController
     if flash[:message]
       redirect_to new_recipe_path and return
     end
-    @tag = Tag.find_by(tag_params)
+    @tag = Tag.find_by(name: tag_name)
     Recipe.transaction do
       unless @tag
-        @tag = Tag.new(tag_params)
+        @tag = Tag.new(name: tag_name)
         @tag.save!
       end
       @recipe = Recipe.new(recipe_params)
@@ -50,10 +50,10 @@ class RecipesController < ApplicationController
       redirect_to edit_recipe_path(@recipe) and return
     end
 
-    @tag    = Tag.find_by(tag_params)
+    @tag    = Tag.find_by(name: tag_name)
     Recipe.transaction do
       unless @tag
-        @tag = Tag.new(tag_params)
+        @tag = Tag.new(name: tag_name)
         @tag.save!
       end
       @recipe.attributes = recipe_params
@@ -108,7 +108,10 @@ class RecipesController < ApplicationController
     )
   end
 
-  def tag_params
-    { name: all_params[:tag_attributes][:name] }
+  def tag_name
+    recipe_tag_params = all_params.permit(
+      tag_attributes: [:name]
+    )
+    recipe_tag_params[:tag_attributes][:name]
   end
 end

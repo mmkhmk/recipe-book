@@ -24,8 +24,9 @@ gem 'jbuilder', '~> 2.5'
 
 # Image
 gem 'rmagick'
-gem 'paperclip'
+gem 'paperclip', '~> 4.3.7'
 gem 'paperclip-av-transcoder'
+gem 'aws-sdk', '< 2.0.0'
 
 gem 'nested_form'
 
