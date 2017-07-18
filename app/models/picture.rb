@@ -8,6 +8,7 @@ class Picture < ActiveRecord::Base
     small: "200x200>", thumb: "100x100>"
   },
   storage: :s3,
+  s3_protocol: :https,
   s3_permissions: :public_read,
   s3_credentials: "#{Rails.root}/config/s3.yml",
   s3_region: 'ap-northeast-1',
